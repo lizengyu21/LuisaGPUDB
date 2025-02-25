@@ -80,4 +80,6 @@ int main(int argc, char *argv[]) {
 
     // Step 6: Save the image to a file
     stbi_write_png("color.png", 1024, 1024, 4, download_image.data(), 0);
+
+    std::cout << "Image saved to color.png\n";
 }

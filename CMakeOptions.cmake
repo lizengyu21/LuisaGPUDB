@@ -1,0 +1,8 @@
+# CMakeOptions.cmake
+set(LUISA_COMPUTE_ENABLE_CUDA ON CACHE BOOL "Enable CUDA backend")
+set(LUISA_COMPUTE_ENABLE_DX OFF CACHE BOOL "Disable DirectX backend")
+set(LUISA_COMPUTE_ENABLE_METAL OFF CACHE BOOL "Disable Metal backend")
+set(LUISA_COMPUTE_ENABLE_CPU OFF CACHE BOOL "Disable CPU backend")
+
+set(CMAKE_BUILD_TYPE Release CACHE STRING "Choose the build type")
+set(LUISA_COMPUTE_DOWNLOAD_NVCOMP ON CACHE BOOL "Download NVCOMP")

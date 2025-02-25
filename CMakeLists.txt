@@ -5,6 +5,8 @@ set(CMAKE_CXX_STANDARD 20)
 
 project(HelloLuisa VERSION 0.1.0 LANGUAGES C CXX)
 
+include(CMakeOptions.cmake)
+
 # you may set the LUISA_COMPUTE_ENABLE_XXX options before including LuisaCompute
 add_subdirectory(ext/LuisaCompute)
 
@@ -12,5 +14,7 @@ add_subdirectory(ext/LuisaCompute)
 include(ext/LuisaCompute/scripts/setup_output_dirs.cmake)
 
 # add your executables
-add_executable(HelloLuisa main.cpp)
-target_link_libraries(HelloLuisa PRIVATE luisa::compute)
+set(EXECUTE_NAME HelloLuisa)
+
+add_subdirectory(src)
+target_link_libraries(${EXECUTE_NAME} PRIVATE luisa::compute)
